@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_start_page"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@drawable/parket2"
     tools:context="ru.alepadesign.hobbitcalck.StartPage">
 
     <br.com.bloder.magic.view.MagicButton
-        android:id="@+id/magic_button"
+        android:id="@+id/mbtn_wood"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:magic_button_size="50dp"
@@ -21,16 +21,14 @@
         app:button_icon_width="25dp"
         app:button_icon_height="25dp"
         app:hide_text="Рассчет количества досок"
-        app:hide_text_size="15dp"
-        app:hide_text_color="@android:color/black"
+        app:hide_text_size="15sp"
+        app:hide_text_color="@android:color/white"
         app:icon_button_color="#bf7f44"
         app:expandable_area_color="#dc9b4e"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
         android:layout_marginTop="47dp" />
 
     <br.com.bloder.magic.view.MagicButton
-        android:id="@+id/magic_button2"
+        android:id="@+id/mbtn_blocks"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:magic_button_size="50dp"
@@ -43,7 +41,8 @@
         app:icon_button_color="#bf7f44"
         app:expandable_area_color="#dc9b4e"
         android:layout_marginTop="34dp"
-        android:layout_below="@+id/magic_button"
+        android:layout_marginBottom="34dp"
+        android:layout_below="@+id/mbtn_wood"
         android:layout_alignParentStart="true" />
 
     <br.com.bloder.magic.view.MagicButton
@@ -75,9 +74,9 @@
         app:hide_text_color="@android:color/black"
         app:icon_button_color="#bf7f44"
         app:expandable_area_color="#dc9b4e"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="34dp"
         android:layout_below="@+id/magic_button4"
         android:layout_alignParentStart="true" />
 
 
-</RelativeLayout>
+</LinearLayout>

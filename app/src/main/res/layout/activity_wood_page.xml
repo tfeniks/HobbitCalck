@@ -1,87 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_wood_page"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="ru.alepadesign.hobbitcalck.wood_page">
+    tools:context="ru.alepadesign.hobbitcalck.WoodPage">
 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="1"
+            android:text="Длина доски (м)" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edt_length"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/textView"
+            android:layout_below="@+id/textView"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="11dp"
+            android:ems="10"
+            android:hint="3"
+            android:inputType="number" />
+    </LinearLayout>
 
     <TextView
-        android:text="Длина доски"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="15dp"
-        android:id="@+id/textView"
-
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:ems="10"
-        android:layout_marginTop="11dp"
-        android:id="@+id/editText"
-        android:layout_below="@+id/textView"
-        android:layout_alignStart="@+id/textView" />
-
-    <TextView
-        android:text="Ширина доски"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
         android:id="@+id/textView1"
-
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editText"
         android:layout_alignTop="@+id/editText"
-        android:layout_alignStart="@+id/editText" />
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="28dp"
+        android:text="Ширина доски (мм)" />
 
     <EditText
+        android:id="@+id/edt_width"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:ems="10"
-        android:id="@+id/editText1"
-        android:layout_below="@+id/textView1"
         android:layout_alignStart="@+id/textView1"
-        android:layout_marginTop="23dp" />
-
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Name"
+        android:layout_below="@+id/textView1"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="23dp"
         android:ems="10"
-        android:id="@+id/editText2"
-        android:layout_centerVertical="true"
-        android:layout_alignStart="@+id/editText1" />
+        android:hint="141"
+        android:inputType="number" />
 
     <TextView
-        android:text="Толщина доски"
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView2"
+        android:layout_marginBottom="14dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="28dp"
+        android:text="Толщина доски (мм)" />
 
-        android:layout_above="@+id/editText2"
-        android:layout_alignStart="@+id/editText2"
-        android:layout_marginBottom="14dp" />
+    <EditText
+        android:id="@+id/edt_thickness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:ems="10"
+        android:hint="41"
+        android:inputType="number" />
+
 
     <Button
-        android:text="Button"
+        android:id="@+id/btn_calculate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/textView"
-        android:layout_alignParentEnd="true"
+        android:layout_gravity="center"
         android:layout_marginEnd="15dp"
-        android:id="@+id/button" />
-</RelativeLayout>
+        android:layout_marginTop="28dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:text="Рассчитать" />
+</LinearLayout>

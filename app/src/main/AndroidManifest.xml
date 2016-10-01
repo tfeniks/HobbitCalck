@@ -15,7 +15,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".wood_page" />
+        <activity android:name=".WoodPage" />
         <activity android:name=".BlockPage"></activity>
     </application>
 

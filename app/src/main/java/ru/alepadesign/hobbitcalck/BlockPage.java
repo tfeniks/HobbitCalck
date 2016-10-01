@@ -9,5 +9,7 @@ public class BlockPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_block_page);
+
+        setTitle("Рассчет количества блоков");
     }
 }

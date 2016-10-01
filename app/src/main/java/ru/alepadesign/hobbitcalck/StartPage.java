@@ -1,5 +1,6 @@
 package ru.alepadesign.hobbitcalck;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,35 +9,36 @@ import android.view.View;
 import br.com.bloder.magic.view.MagicButton;
 
 public class StartPage extends AppCompatActivity {
-    MagicButton magicButton;
+
+    private MagicButton mbtn_wood, mbtn_blocks;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_page);
-        magicButton = (MagicButton) findViewById(R.id.magic_button);
 
-        magicButton.setMagicButtonClickListener(new View.OnClickListener() {
+        mbtn_wood = (MagicButton) findViewById(R.id.mbtn_wood);
+        mbtn_blocks = (MagicButton) findViewById(R.id.mbtn_blocks);
+
+        mbtn_blocks.setMagicButtonClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                activity_wood_page();
+                jumpActivity(StartPage.this, BlockPage.class);
             }
         });
 
-        magicButton.setMagicButtonClickListener(new View.OnClickListener() {
+        mbtn_wood.setMagicButtonClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                activity_block_page();
+                jumpActivity(StartPage.this,WoodPage.class);
             }
         });
     }
-    private void activity_wood_page(){
-        Intent intent = new Intent(StartPage.this,wood_page.class);
+
+    private void jumpActivity(Context context, Class class_jump){
+        Intent intent = new Intent(context, class_jump);
         startActivity(intent);
     }
 
-    private void activity_block_page(){
-        Intent intent = new Intent(StartPage.this,BlockPage.class);
-        startActivity(intent);
-    }
 }
 
