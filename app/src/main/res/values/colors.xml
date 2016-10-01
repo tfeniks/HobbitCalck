@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#bd792c</color>
+    <color name="colorPrimaryDark">#b67438</color>
+    <color name="colorAccent">#ebad68</color>
+
+    <color name="saffron">#dc9b4e</color>
+    <color name="twilight_blue">#fefefe</color>
+    <color name="bizarre">#e7d0c9</color>
+
+
+</resources>
